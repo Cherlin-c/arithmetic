@@ -4,15 +4,15 @@ package com.scl.linkedList.single;
  * @author : scl
  * @date :  2022/8/15
  */
-class SingleLinkedList {
+public class SingleLinkedList {
     //头节点，不存放数据
-    Node head = new Node("", "");
+    SingleNode head = new SingleNode("", "");
 
     /**
      * 加到尾部
      **/
-    public void add(Node next) {
-        Node nextTemp = head;
+    public void add(SingleNode next) {
+        SingleNode nextTemp = head;
         while (true) {
             if (nextTemp.next == null) {
                 nextTemp.next = next;
@@ -25,12 +25,12 @@ class SingleLinkedList {
     /**
      * 根据id大小顺序加入
      **/
-    public void addById(Node next) {
-        Node nextTemp = head;
+    public void addById(SingleNode next) {
+        SingleNode nextTemp = head;
         while (nextTemp.next != null) {
             String id = next.id;
             if (id.compareTo(nextTemp.next.id) < 0) {
-                Node tempp = nextTemp.next;
+                SingleNode tempp = nextTemp.next;
                 nextTemp.next = next;
                 next.next = tempp;
                 break;
@@ -45,8 +45,8 @@ class SingleLinkedList {
     /**
      * 根据id修改
      **/
-    public void putById(Node next) {
-        Node nextTemp = head;
+    public void putById(SingleNode next) {
+        SingleNode nextTemp = head;
         while (nextTemp.next != null) {
             if (nextTemp.next.id.equals(next.id)) {
                 nextTemp.next.value = next.value;
@@ -60,7 +60,7 @@ class SingleLinkedList {
      * 根据id删除
      **/
     public void removeById(String id) {
-        Node nextTemp = head;
+        SingleNode nextTemp = head;
         while (nextTemp.next != null) {
             if (nextTemp.next.id.equals(id)) {
                 nextTemp.next = nextTemp.next.next;
@@ -77,7 +77,7 @@ class SingleLinkedList {
         if (head.next == null) {
             System.out.println("无数据");
         }
-        Node temp = head;
+        SingleNode temp = head;
         while (temp.next != null) {
             temp = temp.next;
             System.out.println("head.toString() = " + temp);
@@ -92,7 +92,7 @@ class SingleLinkedList {
         if (head.next == null) {
             System.out.println("无数据");
         }
-        Node temp = head;
+        SingleNode temp = head;
         while (temp.next != null) {
             temp = temp.next;
             length++;

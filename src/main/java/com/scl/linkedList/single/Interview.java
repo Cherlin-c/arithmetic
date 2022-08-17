@@ -19,12 +19,12 @@ public class Interview {
 
     public static void main(String[] args) {
         SingleLinkedList linkedList = new SingleLinkedList();
-        linkedList.add(new Node("1", "1value"));
-        linkedList.add(new Node("2", "2value"));
-        linkedList.add(new Node("3", "3value"));
-        linkedList.add(new Node("4", "4value"));
-        linkedList.add(new Node("5", "5value"));
-        linkedList.add(new Node("6", "6value"));
+        linkedList.add(new SingleNode("1", "1value"));
+        linkedList.add(new SingleNode("2", "2value"));
+        linkedList.add(new SingleNode("3", "3value"));
+        linkedList.add(new SingleNode("4", "4value"));
+        linkedList.add(new SingleNode("5", "5value"));
+        linkedList.add(new SingleNode("6", "6value"));
 
         //        求单链表的节点个数(不含头节点)
         //    ===========    1 BEGIN    ==============
@@ -43,13 +43,13 @@ public class Interview {
         //    ===========    3 BEGIN    ==============
         System.out.println("==============3================");
         linkedList.list();
-        Node head = linkedList.head;
+        SingleNode head = linkedList.head;
         SingleLinkedList reverseLinkedList = new SingleLinkedList();
-        Node reverseHead = reverseLinkedList.head;
+        SingleNode reverseHead = reverseLinkedList.head;
         while (head.next != null) {
-            Node temp = head.next;
+            SingleNode temp = head.next;
             head.next = head.next.next;
-            Node reverseTemp = reverseHead.next;
+            SingleNode reverseTemp = reverseHead.next;
             reverseHead.next = temp;
             reverseHead.next.next = reverseTemp;
 
@@ -64,15 +64,15 @@ public class Interview {
         //    ===========    4 BEGIN    ==============
         System.out.println("==============4================");
 
-        Stack<Node> nodes = new Stack<Node>();
-        Node node = linkedList.head;
-        while (node.next != null) {
+        Stack<SingleNode> singleNodes = new Stack<SingleNode>();
+        SingleNode singleNode = linkedList.head;
+        while (singleNode.next != null) {
 //            nodes.add(node.next); 意思相同 来自不同类
-            nodes.push(node.next);
-            node = node.next;
+            singleNodes.push(singleNode.next);
+            singleNode = singleNode.next;
         }
-        for (int size = nodes.size(); size > 0; size--) {
-            System.out.println(nodes.pop());
+        for (int size = singleNodes.size(); size > 0; size--) {
+            System.out.println(singleNodes.pop());
         }
         //    ===========    4 END    ==============
 
@@ -87,18 +87,18 @@ public class Interview {
         return linkedList.getLength();
     }
 
-    private static Node method2(SingleLinkedList linkedList, int k) {
+    private static SingleNode method2(SingleLinkedList linkedList, int k) {
         int index = 0;
         int length = linkedList.getLength();
-        Node node = linkedList.head.next;
-        while (node != null) {
+        SingleNode singleNode = linkedList.head.next;
+        while (singleNode != null) {
             if (k == (length - index)) {
-                return node;
+                return singleNode;
             } else {
-                node = node.next;
+                singleNode = singleNode.next;
                 index++;
             }
         }
-        return node;
+        return singleNode;
     }
 }
