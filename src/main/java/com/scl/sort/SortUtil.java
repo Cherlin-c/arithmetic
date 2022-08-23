@@ -10,7 +10,7 @@ import java.util.Random;
  */
 public class SortUtil {
 
-    protected static int[] makeIntArr(int size) {
+    public static int[] makeIntArr(int size) {
         int[] intArr = new int[size];
         Random random = new Random();
         for (int i = 0; i < size; i++) {
@@ -19,7 +19,7 @@ public class SortUtil {
         return intArr;
     }
 
-    protected static int[] copyArray(int[] arrSource) {
+    public static int[] copyArray(int[] arrSource) {
         int length = arrSource.length;
         int[] arrTarget = new int[length];
         for (int i = 0; i < length; i++) {
@@ -28,7 +28,7 @@ public class SortUtil {
         return arrTarget;
     }
 
-    protected static Boolean isIntArrEquals(int[] arr1, int[] arr2) {
+    public static Boolean isIntArrEquals(int[] arr1, int[] arr2) {
         int length = arr2.length;
         if (arr1.length != length) {
             return Boolean.FALSE;
@@ -51,7 +51,7 @@ public class SortUtil {
      * @param q   位置2
      * @date 2022/8/21
      **/
-    protected static void swap(int[] arr, int p, int q) {
+    public static void swap(int[] arr, int p, int q) {
         arr[p] = arr[p] ^ arr[q];
         arr[q] = arr[p] ^ arr[q];
         arr[p] = arr[p] ^ arr[q];
