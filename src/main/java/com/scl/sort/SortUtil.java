@@ -56,4 +56,10 @@ public class SortUtil {
         arr[q] = arr[p] ^ arr[q];
         arr[p] = arr[p] ^ arr[q];
     }
+
+    public static void swap2(int[] arr, int p, int q) {
+        int temp = arr[p];
+        arr[p] = arr[q];
+        arr[q] = temp;
+    }
 }
