@@ -1,5 +1,7 @@
 package com.scl.sort.heap;
 
+import com.scl.sort.SortUtil;
+
 import java.util.Arrays;
 
 /**
@@ -11,25 +13,43 @@ import java.util.Arrays;
  */
 public class RadioSort {
     public static void main(String[] args) {
-        int[] arr = {1, 26, 43, 7, 2, 4, 43, 6, 53, 2, 32, 1, 3, 6};
-//        int[] arr = {1, 26, 4, 14, 4, 26, 7, 2};
-        sort(arr, getMaxDigit(arr));
-        System.out.println("sort(arr) = " + Arrays.toString(arr));
-//        int[] intArr = SortUtil.makeIntArr(50);
-//        int[] intArr2 = SortUtil.copyArray(intArr);
-//        sort(intArr);
-//        Arrays.sort(intArr2);
-//        System.out.println(SortUtil.isIntArrEquals(intArr, intArr2) ? "success" : "fail");
+//        int[] arr = {1, 26, 43, 7, 2, 4, 43, 6, 53, 2, 32, 1, 3, 6};
+//        int[] arr = {18, 26, 4, 14, 22};
+//        sort(arr, getMaxDigit(arr));
+//        System.out.println("sort(arr) = " + Arrays.toString(arr));
+        int[] intArr = SortUtil.makeIntArr(50);
+        int[] intArr2 = SortUtil.copyArray(intArr);
+        sort(intArr, getMaxDigit(intArr));
+        Arrays.sort(intArr2);
+        System.out.println(SortUtil.isIntArrEquals(intArr, intArr2) ? "success" : "fail");
     }
 
 
-    private static void sort(int[] arrayInt, int maxDigit) {
-        int[] bucket = new int[10];
+    private static int[] sort(int[] arrayInt, int maxDigit) {
+        int length = arrayInt.length;
         for (int i = 0; i < maxDigit; i++) {
-            for (int index = 0; index < arrayInt.length; index++) {
-//                arrayInt[index]
+            int[] bucket = new int[10];
+            int[] temp = new int[length];
+            for (int index = 0; index < length; index++) {
+                int mod = mod(arrayInt[index], i);
+                bucket[mod]++;
+            }
+            for (int j = 1; j < bucket.length; j++) {
+                bucket[j] += bucket[j - 1];
+            }
+            for (int index = length - 1; index >= 0; index--) {
+                int mod = mod(arrayInt[index], i);
+                temp[--bucket[mod]] = arrayInt[index];
+            }
+            for (int t = 0; t < temp.length; t++) {
+                arrayInt[t] = temp[t];
             }
         }
+        return arrayInt;
+    }
+
+    private static int mod(int num, int i) {
+        return i > 0 ? num / (10 * i) % 10 : num % 10;
     }
 
     private static int getMaxDigit(int[] arrayInt) {
