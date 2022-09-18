@@ -1,4 +1,4 @@
-package com.scl.sort;
+package com.scl.z.sort;
 
 import java.util.Random;
 

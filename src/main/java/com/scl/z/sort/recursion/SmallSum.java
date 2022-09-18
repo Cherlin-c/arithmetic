@@ -1,4 +1,4 @@
-package com.scl.sort.recursion;
+package com.scl.z.sort.recursion;
 
 /**
  * 小和问题

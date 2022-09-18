@@ -1,5 +1,7 @@
 package com.scl.hot100.link;
 
+import com.scl.ListNode;
+
 /**
  * 21. 合并两个有序链表
  *
@@ -11,8 +13,8 @@ public class Easy21 {
     public static void main(String[] args) {
         ListNode listNode1 = new ListNode(2, new ListNode(3, new ListNode(4)));
         ListNode listNode2 = new ListNode(1, new ListNode(2, new ListNode(4)));
-//        ListNode listNode1 = new ListNode();
-//        ListNode listNode2 = new ListNode(1);
+//        SinglyLinked listNode1 = new SinglyLinked();
+//        SinglyLinked listNode2 = new SinglyLinked(1);
         ListNode listNode = mergeTwoLists2(listNode1, listNode2);
         System.out.println(listNode);
     }
@@ -48,31 +50,6 @@ public class Easy21 {
         }
         temp.next = list1 == null ? list2 : list1;
         return listNode.next;
-    }
-
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-
-        @Override
-        public String toString() {
-            return "ListNode{" +
-                    "val=" + val +
-                    ", next=" + next +
-                    '}';
-        }
     }
 
 }

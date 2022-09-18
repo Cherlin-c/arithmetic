@@ -1,5 +1,7 @@
 package com.scl.hot100.link;
 
+import com.scl.ListNode;
+
 /**
  * 反转链表
  *
@@ -57,38 +59,13 @@ public class Easy206 {
         return newHead;
     }
 
-//    private static ListNode solution2(ListNode head) {
+//    private static SinglyLinked solution2(SinglyLinked head) {
 //        if (head == null || head.next == null) {
 //            return head;
 //        }
-//        ListNode temp = new ListNode();
+//        SinglyLinked temp = new SinglyLinked();
 //        temp.next = solution2(head.next);
 //        return temp.next;
 //    }
 
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-
-    @Override
-    public String toString() {
-        return "ListNode{" +
-                "val=" + val +
-                ", next=" + next +
-                '}';
-    }
 }

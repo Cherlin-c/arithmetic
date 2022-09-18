@@ -1,16 +1,16 @@
-package com.scl.sort.easy;
+package com.scl.z.sort.easy;
 
-import com.scl.sort.SortUtil;
+import com.scl.z.sort.SortUtil;
 
 import java.util.Arrays;
 
 /**
- * 冒泡排序
+ * 插入排序
  *
  * @author : scl
  * @date :  2022/8/21
  */
-public class BubbleSort {
+public class InsertSort {
     public static void main(String[] args) {
 //        int[] arr = {1, 26, 43, 7, 2, 4, 43, 6, 53, 2, 32, 1, 3, 6};
 //        sort(arr);
@@ -24,12 +24,16 @@ public class BubbleSort {
 
     private static void sort(int[] arrayInt) {
         int length = arrayInt.length;
-        for (int i = length; i > 0; i--) {
-            for (int j = 0; j < i - 1; j++) {
-                if (arrayInt[j] > arrayInt[j + 1]) {
-                    SortUtil.swap(arrayInt, j, j + 1);
+        for (int i = 1; i < length; i++) {
+            for (int j = i; j > 0; j--) {
+                if (arrayInt[j] < arrayInt[j - 1]) {
+                    SortUtil.swap(arrayInt, j, j - 1);
+                } else {
+                    break;
                 }
             }
         }
     }
+
+
 }

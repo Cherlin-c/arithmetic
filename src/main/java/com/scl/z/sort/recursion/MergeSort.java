@@ -1,6 +1,6 @@
-package com.scl.sort.recursion;
+package com.scl.z.sort.recursion;
 
-import com.scl.sort.SortUtil;
+import com.scl.z.sort.SortUtil;
 
 import java.util.Arrays;
 

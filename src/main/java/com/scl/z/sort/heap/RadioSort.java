@@ -1,6 +1,6 @@
-package com.scl.sort.heap;
+package com.scl.z.sort.heap;
 
-import com.scl.sort.SortUtil;
+import com.scl.z.sort.SortUtil;
 
 import java.util.Arrays;
 

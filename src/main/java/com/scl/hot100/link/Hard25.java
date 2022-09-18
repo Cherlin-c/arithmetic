@@ -1,5 +1,7 @@
 package com.scl.hot100.link;
 
+import com.scl.ListNode;
+
 /**
  * @author : scl
  * @date :  2022/8/19
@@ -104,28 +106,5 @@ k 是一个正整数，它的值小于或等于链表的长度。如果节点总
         return result;
     }
 
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-
-        @Override
-        public String toString() {
-            return "ListNode{" +
-                    "val=" + val +
-                    ", next=" + next +
-                    '}';
-        }
-    }
+   
 }

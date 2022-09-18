@@ -1,4 +1,4 @@
-package com.scl.sort.heap;
+package com.scl.z.sort.heap;
 
 import java.util.Arrays;
 import java.util.PriorityQueue;

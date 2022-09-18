@@ -1,5 +1,7 @@
 package com.scl.leetbook;
 
+import com.scl.ListNode;
+
 import java.util.Arrays;
 
 /**
@@ -40,20 +42,7 @@ public class Offer_6 {
         }
         return ints;
     }
-
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-
-        public ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
+//
 
 }
 

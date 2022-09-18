@@ -1,4 +1,4 @@
-package com.scl.bit;
+package com.scl.z.bit;
 
 import java.util.Arrays;
 
