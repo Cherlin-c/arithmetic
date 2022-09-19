@@ -24,7 +24,7 @@ public class ListNode {
 
     @Override
     public String toString() {
-        return "SinglyLinked{" +
+        return "ListNode{" +
                 "val=" + val +
                 ", next=" + next +
                 '}';

@@ -25,7 +25,7 @@ public class Mid19 {
      */
 
     public static void main(String[] args) {
-//        SinglyLinked listNode = new SinglyLinked(1, new SinglyLinked(2, new SinglyLinked(3, new SinglyLinked(4))));
+//        ListNode listNode = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4))));
         ListNode listNode = new ListNode(1, new ListNode(2));
         System.out.println("removeNthFromEnd(listNode,2) = " + removeNthFromEnd(listNode, 1));
     }

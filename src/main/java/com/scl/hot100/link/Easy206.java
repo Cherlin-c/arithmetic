@@ -59,11 +59,11 @@ public class Easy206 {
         return newHead;
     }
 
-//    private static SinglyLinked solution2(SinglyLinked head) {
+//    private static ListNode solution2(ListNode head) {
 //        if (head == null || head.next == null) {
 //            return head;
 //        }
-//        SinglyLinked temp = new SinglyLinked();
+//        ListNode temp = new ListNode();
 //        temp.next = solution2(head.next);
 //        return temp.next;
 //    }

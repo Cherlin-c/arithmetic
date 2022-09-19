@@ -13,8 +13,8 @@ public class Easy21 {
     public static void main(String[] args) {
         ListNode listNode1 = new ListNode(2, new ListNode(3, new ListNode(4)));
         ListNode listNode2 = new ListNode(1, new ListNode(2, new ListNode(4)));
-//        SinglyLinked listNode1 = new SinglyLinked();
-//        SinglyLinked listNode2 = new SinglyLinked(1);
+//        ListNode listNode1 = new ListNode();
+//        ListNode listNode2 = new ListNode(1);
         ListNode listNode = mergeTwoLists2(listNode1, listNode2);
         System.out.println(listNode);
     }
