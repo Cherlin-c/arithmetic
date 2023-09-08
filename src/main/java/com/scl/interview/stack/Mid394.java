@@ -38,8 +38,13 @@ public class Mid394 {
     final static String nums = "0123456789";
 
     public static void main(String[] args) {
-        String s = "3[a]2[bc]";
-        System.out.println("decodeString(s) = " + decodeString(s));
+//        String s = "3[a]2[bc]";
+//        System.out.println("decodeString(s) = " + decodeString(s));
+        char c = '1';
+        int k = c - '0';
+        int k2 = Character.getNumericValue(c);
+        System.out.println("k = " + k);
+        System.out.println("k2 = " + k2);
     }
 
 
@@ -92,8 +97,8 @@ public class Mid394 {
      * 辅助栈法
      * 本题难点在于括号内嵌套括号，需要从内向外生成与拼接字符串，这与栈的先入后出特性对应
      * 思路：构建辅助栈 stack
-     *      1.当 c 为数字时，将数字字符转化为数字 k，用于后续倍数计算
-     *      2.当 c 为字母时，在 res 尾部添加 c；
+     * 1.当 c 为数字时，将数字字符转化为数字 k，用于后续倍数计算
+     * 2.当 c 为字母时，在 res 尾部添加 c；
      * k为[]前面的倍数
      **/
     public static String decodeString(String s) {
